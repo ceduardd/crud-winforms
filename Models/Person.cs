@@ -25,5 +25,13 @@ namespace Models
         public string Cedula { get => cedula; set => cedula = value; }
         public string Email { get => email; set => email = value; }
         public DateTime Birthdate { get => birthdate; set => birthdate = value; }
+
+        public override string ToString()
+        {
+            return $"Nombre: { name }" + Environment.NewLine +
+                $"Cédula: { cedula }" + Environment.NewLine +
+                $"Email: { email }" + Environment.NewLine +
+                $"Fecha de nacimiento: { birthdate.ToShortDateString() }" + Environment.NewLine;
+        }
     }
 }

@@ -8,13 +8,13 @@ namespace Models
 {
     class Reader : Person
     {
-        private List<Book> borrowedBooks;
+        private List<BookLoan> bookLoans;
 
         public Reader(string name, string cedula, string email, DateTime birthdate) : base(name, cedula, email, birthdate)
         {
-            borrowedBooks = null;
+            bookLoans = null;
         }
 
-        internal List<Book> BorrowedBooks { get => borrowedBooks; set => borrowedBooks = value; }
+        internal List<BookLoan> BookLoans { get => bookLoans; set => bookLoans = value; }
     }
 }

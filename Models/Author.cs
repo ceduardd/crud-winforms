@@ -8,13 +8,17 @@ namespace Models
 {
     public class Author : Person
     {
-        private List<Book> books;
-
-        public Author(string name, string cedula, string email, DateTime birthdate) : base(name, cedula, email, birthdate)
+        private string category;
+        public Author(string name, string cedula, string email, DateTime birthdate, string category) : base(name, cedula, email, birthdate)
         {
-            books = null;
+            this.category = category;
         }
 
-        internal List<Book> Books { get => books; set => books = value; }
+        public string Category { get => category; set => category = value; }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Categoría: { category }" + Environment.NewLine;
+        }
     }
 }
